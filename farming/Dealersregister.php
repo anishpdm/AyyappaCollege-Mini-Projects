@@ -47,7 +47,7 @@
           
             <div class="col col-sm-4">
 
-            <center>   <h3>Online Staff Portal</h3> </center>
+            <center>   <h3>Online Farming Portal</h3> </center>
             <center><h6>Dealer Registration</h6></center>
             <form method="POST">
 <table class="table">

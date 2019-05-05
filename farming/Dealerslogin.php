@@ -48,7 +48,7 @@
           
             <div class="col col-sm-4">
 
-            <center>   <h3>Online Staff Portal</h3> </center>
+            <center>   <h3>Online Farming Portal</h3> </center>
             <center><h6>Dealer LOGIN</h6></center>
             <form method="POST">
 <table class="table">
@@ -106,7 +106,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<script> window.location.href='viewfaculties.php' </script>";
+        echo "<script> window.location.href='viewdealerprofile.php' </script>";
 
 
     }

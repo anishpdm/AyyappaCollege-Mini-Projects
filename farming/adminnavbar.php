@@ -34,7 +34,7 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="viewfarmers.php">View All</a>
-        <a class="dropdown-item" href="#">Search</a>
+        <a class="dropdown-item" href="approvefarmers.php">Approve</a>
     
       </div>
     </li>
@@ -47,7 +47,7 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="viewdealers.php">View All</a>
-        <a class="dropdown-item" href="#">Search</a>
+        <a class="dropdown-item" href="approvedealers.php">Approve</a>
     
       </div>
     </li>
