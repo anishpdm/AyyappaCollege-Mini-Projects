@@ -1,3 +1,8 @@
+<?php
+session_start();
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,21 +49,21 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Farming Portal</h3> </center>
             <center><h6>Farmer LOGIN</h6></center>
-
+            <form method="POST">
 <table class="table">
 <tr>
 <td>Username</td>
-<td><input type="text" name="uname" class="form-control"></td>
+<td><input type="text" name="uname" class="form-control" required></td>
 </tr>
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="uname" class="form-control"></td>
+<td><input type="password" name="pass" class="form-control" required></td>
 </tr>
 
 <tr>
@@ -69,12 +74,17 @@
 </tr>
 </table>
 
-<center><h5> <Button class="btn btn-success">LOGIN</Button></h5></center>
+
+<center><h5> <Button name="but"class="btn btn-success">LOGIN</Button></h5></center>
 <center> <a href="index.php">Admin Click Here to LogIn</a>  </center>
 <center> <a href="Farmerregister.php">Farmer Registartion</a>  </center>
 
 <center> <a href="Dealerslogin.php">Dealers Click Here to LogIn</a>  </center>
 
+
+
+
+</form>
             </div>
             </span>
 
@@ -85,6 +95,36 @@
     </div>
 
 
-    
+
 </body>
 </html>
+
+
+<?php
+include './dbcon.php';
+
+if(isset($_POST['but'])){
+   $uname=$_POST['uname'];
+   $pass=$_POST['pass'];
+
+   $sql = "SELECT `id`, `name`, `address`, `phoneno`, `emailid`, `uname`, `passwd`, `status` FROM `farmer` WHERE `uname`='$uname' and `passwd`='$pass' and `status`=1 ";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+
+$_SESSION['Fid']=$row["id"];
+
+
+
+        echo "<script> window.location.href='viewdealerAds.php' </script>";
+
+
+    }
+} else {
+    echo "<script> alert('Invalid Credentials') </script>";
+}
+
+}
+?>

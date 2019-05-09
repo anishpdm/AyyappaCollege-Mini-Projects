@@ -44,7 +44,7 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Farming Portal</h3> </center>
@@ -66,13 +66,13 @@
 
 <tr>
 <td>Phone</td>
-<td><input type="text" name="Phone" class="form-control" required></td>
+<td><input type="text" name="Phone" class="form-control" required pattern="[6789]{1}[0-9]{9}"></td>
 </tr>
 
 
 <tr>
 <td>E-mail</td>
-<td><input type="email" name="email" class="form-control" required></td>
+<td><input type="email" name="email" class="form-control"  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></td>
 </tr>
 
 
@@ -83,12 +83,12 @@
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="pass" class="form-control" required></td>
+<td><input type="password" name="pass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
 </tr>
 
 <tr>
 <td>Confirm Password</td>
-<td><input type="password" name="cpass" class="form-control" required></td>
+<td><input type="password" name="cpass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
 </tr>
 
 <tr>
@@ -100,8 +100,8 @@
 </table>
 
 <center><h5> <Button name="but" class="btn btn-success">REGISTER</Button></h5></center>
-<center> <a href="studentlogin.php">Students Click Here to LogIn</a>  </center>
-<center> <a href="facultylogin.php">Faculty Click Here to LogIn</a>  </center>
+<center> <a href="Dealerslogin.php">Dealers Click Here to LogIn</a>  </center>
+<center> <a href="Farmerlogin.php">Farmers Click Here to LogIn</a>  </center>
 
 
 </form>
@@ -115,7 +115,7 @@
     </div>
 
 
-    
+
 </body>
 </html>
 
@@ -131,7 +131,7 @@ if(isset($_POST['but'])){
    $Phone=$_POST['Phone'];
    $addr=$_POST['addr'];
    $email=$_POST['email'];
-   
+
 
    $sql = "INSERT INTO `farmer`(`name`, `address`, `phoneno`, `emailid`, `uname`, `passwd`, `status`)
     VALUES('$name','$addr','$Phone','$email','$uname','$pass',0)";

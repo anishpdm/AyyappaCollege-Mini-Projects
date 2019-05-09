@@ -71,7 +71,7 @@
 
 <center><h5> <Button name="but" class="btn btn-success">LOGIN</Button></h5></center>
 <center> <a href="Dealerslogin.php">Dealers Click Here to LogIn</a>  </center>
-<center> <a href="facultylogin.php">Farmers Click Here to LogIn</a>  </center>
+<center> <a href="Farmerlogin.php">Farmers Click Here to LogIn</a>  </center>
 
 
 </form>

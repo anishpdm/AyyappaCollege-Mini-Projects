@@ -16,7 +16,7 @@
     <title>Document</title>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Online Farming Assistance | Dealer </a>
+  <a class="navbar-brand" href="#">Online University Portal</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -30,12 +30,10 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Ads
+        Faculty
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="viewfarmerAds.php">View Ads</a>
-
-            <a class="dropdown-item" href="postDealerAds.php">Post Ads</a>
+        <a class="dropdown-item" href="searchfaculty.php">Search</a>
 
 
       </div>
@@ -45,13 +43,11 @@
         <!-- Dropdown -->
         <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Messages
+        Blog
       </a>
       <div class="dropdown-menu">
+            <a class="dropdown-item" href="ViewPosts.php">View Posts</a>
 
-          <a class="dropdown-item" href="newmsgToFarmer.php">New Message</a>
-        <a class="dropdown-item" href="sndMsgToFarmer.php">view send Messages</a>
-        <!-- <a class="dropdown-item" href="approvedealers.php">Approve</a> -->
 
       </div>
     </li>
@@ -60,13 +56,11 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-    Complaints
+    Messages
   </a>
   <div class="dropdown-menu">
+        <a class="dropdown-item" href="ViewMsgs.php">View Messages </a>
 
-      <a class="dropdown-item" href="complaintAboutFarmer.php">Raise a Complaint </a>
-  
-    <!-- <a class="dropdown-item" href="approvedealers.php">Approve</a> -->
 
   </div>
 </li>
@@ -80,4 +74,4 @@
 
 
 </head>
-<body>
+<body style='background-color: #f39c12'>

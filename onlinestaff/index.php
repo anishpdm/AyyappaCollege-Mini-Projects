@@ -44,7 +44,7 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Staff Portal</h3> </center>
@@ -53,12 +53,12 @@
 <table class="table">
 <tr>
 <td>Username</td>
-<td><input type="text" name="uname" class="form-control"></td>
+<td><input type="text" name="uname" class="form-control" required></td>
 </tr>
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="pass" class="form-control"></td>
+<td><input type="password" name="pass" class="form-control" required></td>
 </tr>
 
 <tr>
@@ -85,7 +85,7 @@
     </div>
 
 
-    
+
 </body>
 </html>
 

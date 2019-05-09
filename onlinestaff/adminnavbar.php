@@ -16,7 +16,7 @@
     <title>Document</title>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Online Staff Portal</a>
+  <a class="navbar-brand" href="#">Online University Portal</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -34,8 +34,8 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="viewstudents.php">View All</a>
-        <a class="dropdown-item" href="#">Search</a>
-    
+      
+
       </div>
     </li>
 
@@ -47,19 +47,31 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="viewfaculties.php">View All</a>
-        <a class="dropdown-item" href="#">Search</a>
-    
+
+
       </div>
     </li>
 
 
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    Blog
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="adminBlogView.php">View </a>
+
+
+  </div>
+</li>
+
+
     <li class="nav-item">
       <a class="nav-link" href="index.php">LogOut</a>
-    </li> 
+    </li>
   </ul>
 </nav>
 
 
 </head>
 <body>
-    

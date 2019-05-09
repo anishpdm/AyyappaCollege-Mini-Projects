@@ -44,7 +44,7 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Staff Portal</h3> </center>
@@ -87,12 +87,14 @@
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="pass" class="form-control" required></td>
+<td><input type="password" name="pass" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+></td>
 </tr>
 
 <tr>
 <td>Confirm Password</td>
-<td><input type="password" name="cpass" class="form-control" required></td>
+<td><input type="password" name="cpass" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+></td>
 </tr>
 
 <tr>
@@ -119,7 +121,7 @@
     </div>
 
 
-    
+
 </body>
 </html>
 

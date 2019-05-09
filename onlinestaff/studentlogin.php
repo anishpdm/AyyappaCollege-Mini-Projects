@@ -45,7 +45,7 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Staff Portal</h3> </center>
@@ -54,12 +54,12 @@
 <table class="table">
 <tr>
 <td>Username</td>
-<td><input type="text" name="uname" class="form-control"></td>
+<td><input type="text" name="uname" class="form-control" required/></td>
 </tr>
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="pass" class="form-control"></td>
+<td><input type="password" name="pass" class="form-control" required /></td>
 </tr>
 
 <tr>
@@ -69,13 +69,13 @@
  </td>
 </tr>
 </table>
-<center><h5> <Button class="btn btn-success">LOGIN</Button></h5></center>
+<center><h5> <Button name="but" class="btn btn-success">LOGIN</Button></h5></center>
 <center> <a href="studentregister.php">Student Registration</a>  </center>
 
 <center> <a href="index.php">Admin Click Here to LogIn</a>  </center>
 <center> <a href="facultylogin.php">Faculty Click Here to LogIn</a>  </center>
 
-  
+
 
 </form>
             </div>
@@ -88,25 +88,30 @@
     </div>
 
 
-    
+
 </body>
 </html>
 
 
 <?php
+session_start();
 include './dbcon.php';
 
 if(isset($_POST['but'])){
    $uname=$_POST['uname'];
    $pass=$_POST['pass'];
 
-   $sql = "SELECT `id`, `uname`, `pswd` FROM `Admin` WHERE `uname`='$uname' and `pswd`='$pass'";
+   $sql = "SELECT `id`, `name`, `dept`, `college`, `uname`, `pswd` FROM `student` WHERE `uname`='$uname' and `pswd`='$pass' ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<script> window.location.href='viewfaculties.php' </script>";
+
+      $studId=$row["id"];
+      $_SESSION["studId"]=$studId;
+
+        echo "<script> window.location.href='searchfaculty.php' </script>";
 
 
     }

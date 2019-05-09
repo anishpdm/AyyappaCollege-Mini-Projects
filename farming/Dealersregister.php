@@ -44,7 +44,7 @@
             <div class="row">
             <div class="col col-sm-4">
             </div>
-          
+
             <div class="col col-sm-4">
 
             <center>   <h3>Online Farming Portal</h3> </center>
@@ -72,7 +72,7 @@
 
 <tr>
 <td>E-mail</td>
-<td><input type="email" name="email" class="form-control" required></td>
+<td><input type="email" name="email" class="form-control"  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></td>
 </tr>
 
 
@@ -83,12 +83,14 @@
 
 <tr>
 <td>Password</td>
-<td><input type="password" name="pass" class="form-control" required></td>
+<td><input type="password" name="pass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+ required></td>
 </tr>
 
 <tr>
 <td>Confirm Password</td>
-<td><input type="password" name="cpass" class="form-control" required></td>
+<td><input type="password" name="cpass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+ required></td>
 </tr>
 
 <tr>
@@ -115,7 +117,7 @@
     </div>
 
 
-    
+
 </body>
 </html>
 
@@ -131,7 +133,7 @@ if(isset($_POST['but'])){
    $Phone=$_POST['Phone'];
    $addr=$_POST['addr'];
    $email=$_POST['email'];
-   
+
 
    $sql = "INSERT INTO `dealer`(`name`, `address`, `phoneno`, `mailId`, `uname`, `passwd`, `status`)
     VALUES('$name','$addr','$Phone','$uname','$pass',0)";
